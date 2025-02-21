@@ -1,15 +1,12 @@
-<header>
-    <div>
-      <!-- Otsikkopalkin taustakuva -->
-      <img src="./res/images/C_05628.jpg">
-      <!-- Nimi -->
-      <div>
-        <a href="./index.html">Jaakko Saano</a>
-      </div>
-      <div>
-        Valokuvaaja
-      </div>
-      <!-- Satunnainen kuva -painike -->
-      <button type="button">Satunnainen kuva</button>
+<header class="relative h-64 bg-[url(../res/images/C_05628.jpg)] bg-center">
+  <div class="absolute inset-0 bg-black/25"></div>
+
+  <div class="text-white relative z-10 flex justify-between items-center h-full px-8">
+    <div class="text-center mx-auto">
+      <a class="text-4xl font-bold" href="./index.html">Jaakko Saano</a>
+      <p class="text-lg">Valokuvaaja</p>
     </div>
-  </header>
+    <!-- Satunnainen kuva -painike -->
+    <button type="button" class="absolute right-8 p-2 cursor-pointer rounded-lg shadow-md bg-gradient-to-r from-indigo-500 to-emerald-500">Satunnainen kuva</button>
+  </div>
+</header>
