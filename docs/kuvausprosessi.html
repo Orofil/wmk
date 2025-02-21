@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuvausprosessi | Jaakko Saano - Valokuvaaja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
+  <link rel="stylesheet" href="./style/output.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav-top"></div>
+  <div id="content"></div>
+  <div id="footer"></div>
+
+  <script>
+    function budgetSSG(id, file) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById(id).innerHTML = data;
+              console.log("Loaded ", data);
+            })
+            .catch(error => console.error(`Error loading ${file}:`, error));
+    }
+
+    budgetSSG("header", "./html/header.html");
+    budgetSSG("nav-top", "./html/nav-top.html");
+    budgetSSG("footer", "./html/footer.html");
+  </script>
+</body>
+</html>
