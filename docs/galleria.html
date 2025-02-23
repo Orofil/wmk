@@ -6,27 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
+
+  <script src="./scripts/load.js"></script>
+  <script src="./scripts/gallery.js"></script>
 </head>
 <body>
   <div id="header"></div>
   <div id="nav-top"></div>
-  <div id="content"></div>
+  <main id="content">
+    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"> <!-- TODO muuta omaan tyyliin -->
+    <article>
+      <h3>Kuvan nimi</h3>
+      <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
+      <p class="mb-6"><span class="font-bold">Kategoria: </span><a href="">Luonto</a></p> <!-- TODO href ja sivujen osoitteiden rakenne -->
+    </article>
+  </main>
   <div id="footer"></div>
-
-  <script>
-    function budgetSSG(id, file) {
-        fetch(file)
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById(id).innerHTML = data;
-              console.log("Loaded ", data);
-            })
-            .catch(error => console.error(`Error loading ${file}:`, error));
-    }
-
-    budgetSSG("header", "./html/header.html");
-    budgetSSG("nav-top", "./html/nav-top.html");
-    budgetSSG("footer", "./html/footer.html");
-  </script>
 </body>
 </html>

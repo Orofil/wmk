@@ -6,43 +6,29 @@
   <meta name="viewport" content="width=device_width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
+
+  <script src="./scripts/load.js"></script>
 </head>
 <body>
   <div id="header"></div>
   <div id="nav-top"></div>
-  <div id="content" class="px-8 m-auto"> <!-- TODO background-image CSS -->
-    <section>
-      <p class="text-md/10 break-words mb-6">
+  <main id="content" class="px-8 m-auto text-md/10 break-words"> <!-- TODO background-image CSS -->
+      <p class="mb-6">
         Tähän tekstiä valokuvaamisesta... text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
       </p>
       <img src="./res/images/C_05628.jpg" class="w-xs h-xs float-right">
-      <p class="text-md/10 break-words mb-6">
+      <p class="mb-6">
         Tänne lisää tekstiä........... wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww
       </p>
-    </section>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"> <!-- TODO muuta omaan tyyliin -->
-    <section>
-      <h3>Kuvan nimi</h3>
-      <p class="text-md/10 break-words mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
-      <p class="text-md/10 break-words mb-6"><span class="font-bold">Kategoria: </span><a href="">Luonto</a></p> <!-- TODO href ja sivujen osoitteiden rakenne -->
-    </section>
-  </div>
+      <h2>Galleria</h2>
+      <button>Galleria</button>
+      <h2>Aiheet</h2>
+      <button>Aiheet</button>
+      <h2>Välineet</h2>
+      <button>Välineet</button>
+      <h2>Kuvausprosessi</h2>
+      <button>Kuvausprosessi</button>
+  </main>
   <div id="footer"></div>
-
-  <script>
-    function budgetSSG(id, file) {
-        fetch(file)
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById(id).innerHTML = data;
-              console.log("Loaded ", data);
-            })
-            .catch(error => console.error(`Error loading ${file}:`, error));
-    }
-
-    budgetSSG("header", "./html/header.html");
-    budgetSSG("nav-top", "./html/nav-top.html");
-    budgetSSG("footer", "./html/footer.html");
-  </script>
 </body>
 </html>

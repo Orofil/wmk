@@ -4,8 +4,8 @@
 	"title": "Testikuva",
 	"date": "2025-02-01",
 	"location": "Patosilta, Tammerkoski, Tampere",
-	"description": "Tämä kuva on testikuva, jolla testaan koodin toimivuutta.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ipsum nec lacus lacinia rhoncus sed eu dui. Vivamus at eleifend leo. Nulla mattis convallis arcu a tincidunt. Nulla cursus sit amet mauris sagittis maximus. Fusce sed ligula ac enim posuere vestibulum id ut dui. Donec blandit mi mauris, ac feugiat mauris fermentum eu."
-	"category": "testi",
+	"description": "Tämä kuva on testikuva, jolla testaan koodin toimivuutta.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ipsum nec lacus lacinia rhoncus sed eu dui. Vivamus at eleifend leo. Nulla mattis convallis arcu a tincidunt. Nulla cursus sit amet mauris sagittis maximus. Fusce sed ligula ac enim posuere vestibulum id ut dui. Donec blandit mi mauris, ac feugiat mauris fermentum eu.",
+	"category": "Testi",
 	"image_size": "",
 	"image_position": ""
 }
