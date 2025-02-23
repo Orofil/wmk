@@ -1,5 +1,6 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-#content {
-    max-width: 60rem;
+@layer components {
+    
 }

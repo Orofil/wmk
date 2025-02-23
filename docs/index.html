@@ -9,10 +9,11 @@
 
   <script src="./scripts/load.js"></script>
 </head>
-<body>
+<body class="relative">
   <div id="header"></div>
-  <div id="nav-top"></div>
-  <main id="content" class="px-8 m-auto text-md/10 break-words"> <!-- TODO background-image CSS -->
+  <div id="nav-top" class="sticky top-0 z-10"></div>
+  <div class="bg-[url(../res/images/C_02370.jpg)] bg-cover">
+    <main id="content" class="max-w-4xl p-8 m-auto text-white text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
       <p class="mb-6">
         Tähän tekstiä valokuvaamisesta... text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
       </p>
@@ -20,15 +21,28 @@
       <p class="mb-6">
         Tänne lisää tekstiä........... wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww
       </p>
-      <h2>Galleria</h2>
-      <button>Galleria</button>
-      <h2>Aiheet</h2>
-      <button>Aiheet</button>
-      <h2>Välineet</h2>
-      <button>Välineet</button>
-      <h2>Kuvausprosessi</h2>
-      <button>Kuvausprosessi</button>
-  </main>
+      <div class="mb-6 relative">
+        <a class="float-right m-2 w-xs h-20 bg-green-300 bg-cover border-white rounded-lg flex items-center justify-center text-black text-lg hover:bg-blend-multiply" href="./galleria.html">Galleria</a> <!-- TODO background image, border, rounded corners -->
+        <h2>Galleria</h2>
+        <p>Tekstiä galleriaan ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+      </div>
+      <div>
+        <h2>Aiheet</h2>
+        <p>Tekstiä aiheisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+        <a class="float-right" href="./aiheet.html">Aiheet</a>
+      </div>
+      <div>
+        <h2>Välineet</h2>
+        <p>Tekstiä välineisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+        <a class="float-right" href="./valineet.html">Välineet</a>
+      </div>
+      <div>
+        <h2>Kuvausprosessi</h2>
+        <p>Tekstiä kuvausprosessiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+        <a class="float-right" href="./kuvausprosessi.html">Kuvausprosessi</a>
+      </div>
+    </main>
+  </div>
   <div id="footer"></div>
 </body>
 </html>
