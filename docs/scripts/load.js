@@ -1,12 +1,15 @@
-function budgetSSG(id, file) {
-    fetch(file)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById(id).innerHTML = data;
-        })
-        .catch(error => console.error(`Error loading ${file}:`, error));
-}
-
-budgetSSG("header", "./html/header.html");
-budgetSSG("nav-top", "./html/nav-top.html");
-budgetSSG("footer", "./html/footer.html");
+$(function() {
+    $("#header").load("./html/header.html");
+    $("#nav-top").load("./html/nav-top.html", function() {
+        // Näytä tämänhetkinen sivu valittuna
+        var location = window.location.href;
+        location = location.slice(location.lastIndexOf("/") + 1);
+        if (location.endsWith(".html")) {
+            location = location.slice(0, location.length - 5);
+        }
+        
+        const navList = document.getElementById("nav-" + location);
+        navList.classList.add("bg-blue-800");
+    });
+    $("#footer").load("./html/footer.html");
+})

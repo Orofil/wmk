@@ -10,17 +10,24 @@
   <script src="./scripts/load.js"></script>
   <script src="./scripts/gallery.js"></script>
 </head>
-<body>
+<body class="relative">
   <div id="header"></div>
   <div id="nav-top"></div>
-  <main id="content">
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"> <!-- TODO muuta omaan tyyliin -->
-    <article>
-      <h3>Kuvan nimi</h3>
-      <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
-      <p class="mb-6"><span class="font-bold">Kategoria: </span><a href="">Luonto</a></p> <!-- TODO href ja sivujen osoitteiden rakenne -->
-    </article>
-  </main>
+  <div class="bg-[url(../res/images/C_02370.jpg)] bg-cover">
+    <main id="content" class="max-w-4xl p-8 m-auto text-white text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
+      <!-- Sivunavigaatio -->
+      <aside class="absolute float-right">
+        testi
+      </aside>
+  
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"> <!-- TODO muuta omaan tyyliin -->
+      <article>
+        <h3>Kuvan nimi</h3>
+        <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
+        <p class="mb-6"><span class="font-bold">Kategoria: </span><a href="">Luonto</a></p> <!-- TODO href ja sivujen osoitteiden rakenne -->
+      </article>
+    </main>
+  </div>
   <div id="footer"></div>
 </body>
 </html>
