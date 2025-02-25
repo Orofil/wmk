@@ -2,5 +2,11 @@
 @tailwind utilities;
 
 @layer components {
-    
+    .slide-line {
+        left: var(--position);
+    }
+
+    .slide-img {
+        width: var(--position);
+    }
 }
