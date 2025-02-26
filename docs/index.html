@@ -11,45 +11,50 @@
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
 </head>
-<body class="relative">
+<body class="min-h-screen relative flex flex-col">
   <div id="header"></div>
   <div id="nav-top" class="sticky top-0 z-10"></div>
-  <div class="bg-[url(../res/images/C_02370.jpg)] bg-cover">
-    <main id="content" class="max-w-4xl p-8 m-auto text-white text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
-      <p class="mb-6">
-        Tähän tekstiä valokuvaamisesta... text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
-      </p>
-      <img src="./res/images/C_05628.jpg" class="w-xs h-xs float-right">
-      <p class="mb-6">
-        Tänne lisää tekstiä........... wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww
-      </p>
-      <div class="mb-6 relative">
-        <a class="relative float-right m-2 px-10 w-xs h-20 border-white rounded-xl overflow-hidden flex gap-3 items-center text-black text-lg hover:bg-blend-multiply" href="./galleria.html">
-          <img class="absolute right-0 object-cover" src="./res/images/C_05628.jpg" loading="lazy" decoding="async">
-          <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-green-300 from-50% to-green-300/0 to-80%"></div>
-          <div class="pb-1 text-black font-semibold text-2xl z-10">Galleria</div>
-          <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-            <!-- Reshot.com > Arrow Chevron Right -->
-            <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
-          </svg>
-        </a>
-        <h2>Galleria</h2>
-        <p>Tekstiä galleriaan ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
-      </div>
-      <div>
-        <h2>Aiheet</h2>
-        <p>Tekstiä aiheisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
-        <a class="float-right" href="./aiheet.html">Aiheet</a>
-      </div>
-      <div>
-        <h2>Välineet</h2>
-        <p>Tekstiä välineisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
-        <a class="float-right" href="./valineet.html">Välineet</a>
-      </div>
-      <div>
-        <h2>Kuvausprosessi</h2>
-        <p>Tekstiä kuvausprosessiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
-        <a class="float-right" href="./kuvausprosessi.html">Kuvausprosessi</a>
+  <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370.jpg)] bg-cover">
+    <main class="flex-1 max-w-8xl grid grid-cols-[1fr_3fr_1fr] m-auto text-white">
+      <div id="content" class="col-start-2 col-end-3 max-w-4xl p-8 text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
+        <p class="mb-6">
+          Tähän tekstiä valokuvaamisesta... text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
+        </p>
+        <img src="./res/images/C_05628.jpg" class="w-xs h-xs float-right">
+        <p class="mb-6">
+          Tänne lisää tekstiä........... wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww wwwww
+        </p>
+  
+        <hr>
+        <h2>Sivuston sisältö</h2>
+        <div class="mb-6 relative">
+          <a class="relative float-right m-2 px-10 w-xs h-20 border-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg hover:bg-blend-multiply" href="./galleria.html">
+            <img class="absolute right-0 object-cover" src="./res/images/C_05628.jpg" loading="lazy" decoding="async">
+            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-green-300 from-50% to-green-300/0 to-80%"></div>
+            <div class="pb-1 text-black font-semibold text-2xl z-10">Galleria</div>
+            <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <!-- Reshot.com > Arrow Chevron Right -->
+              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <h3>Galleria</h3>
+          <p>Tekstiä galleriaan ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+        </div>
+        <div>
+          <h3>Aiheet</h3>
+          <p>Tekstiä aiheisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+          <a class="float-right" href="./aiheet.html">Aiheet</a>
+        </div>
+        <div>
+          <h3>Välineet</h3>
+          <p>Tekstiä välineisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+          <a class="float-right" href="./valineet.html">Välineet</a>
+        </div>
+        <div>
+          <h3>Kuvausprosessi</h3>
+          <p>Tekstiä kuvausprosessiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
+          <a class="float-right" href="./kuvausprosessi.html">Kuvausprosessi</a>
+        </div>
       </div>
     </main>
   </div>
