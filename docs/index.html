@@ -10,6 +10,10 @@
 
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
+
+  <!-- MapLibre -->
+  <script src='https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.js'></script>
+  <link href="https://unpkg.com/maplibre-gl@^5.1.0/dist/maplibre-gl.css" rel="stylesheet" />
 </head>
 <body class="min-h-screen relative flex flex-col">
   <div id="header"></div>
@@ -55,9 +59,18 @@
           <p>Tekstiä kuvausprosessiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
           <a class="float-right" href="./kuvausprosessi.html">Kuvausprosessi</a>
         </div>
+
+        <hr>
+        <!-- Kartta kuvista -->
+        <div class="mb-6 flex-row">
+          <div class="flex-1"></div> <!-- TODO kuvat -->
+          <div id="map" class="w-110 h-136"></div>
+        </div>
       </div>
     </main>
   </div>
   <div id="footer"></div>
+
+  <script src="./scripts/map.js" type="module"></script>
 </body>
 </html>

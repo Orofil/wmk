@@ -9,6 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./scripts/load.js"></script>
   <script src="./scripts/gallery.js"></script>
+  <script src="./scripts/image-modal.js"></script>
 
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
@@ -17,36 +18,43 @@
   <div id="header"></div>
   <div id="nav-top"></div>
   <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370.jpg)] bg-cover">
-    <main class="flex-1 max-w-8xl grid grid-cols-[1fr_3fr_1fr] m-auto text-white">
+    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-white">
       <div id="content" class="col-start-2 col-end-3 max-w-4xl p-8 text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"> <!-- TODO muuta omaan tyyliin -->
-        <article>
-          <h3 id="">Ruostunut portti ja kuluneet portaat</h3>
-          <p class="">18.6.2023, Lahti, Suomi</p>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+        <article class="min-h-[400px]">
+          <img class="modal-tmb cursor-pointer rounded-md shadow-lg float-right ml-4" aria-label="Suurenna kuva" src="/docs/res/images/CEI_06378_260.jpg">
+          <h3 id="lahti-portti">Ruostunut portti ja kuluneet portaat</h3>
+          <p class="italic">18.6.2023, Lahti, Suomi</p>
           <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
-          <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline" href="./aiheet/aihe.html?name="></a></p>
-          <img class="cursor-pointer" src="/docs/res/images/CEI_06378_260.jpg">
+          <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline hover:text-blue-400" href="./aiheet/aihe.html?name=Jotain">Jotain</a></p>
         </article>
 
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"> <!-- TODO muuta omaan tyyliin -->
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
         <article>
-          <h3>Vene kevätauringossa</h3>
-          <p class="">18.6.2023, Lahti, Suomi</p>
+          <h3 id="vene">Vene kevätauringossa</h3>
+          <p class="italic">7.5.2022, Kolmisoppi, Kuopio, Suomi</p>
           <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
-          <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline" href="./aiheet/aihe.html?name=">a</a></p>
-          <img class="cursor-pointer" src="/docs/res/images/C_02058_1200.jpg">
+          <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline hover:text-blue-400" href="./aiheet/aihe.html?name=Jotain%20hienoa">Jotain hienoa</a></p>
+          <img class="modal-tmb cursor-pointer rounded-md shadow-lg" aria-label="Suurenna kuva" src="/docs/res/images/C_02058_1200.jpg">
         </article>
       </div>
 
       <!-- Sivunavigaatio -->
-      <nav class="col-start-3 col-end-4 p-8 m-8 h-fit backdrop-brightness-50 backdrop-blur-md rounded-lg">
+      <nav class="col-start-3 col-end-4 px-4 py-6 m-8 h-fit backdrop-brightness-50 backdrop-blur-md rounded-lg">
         <ol id="main-nav">
-          <li>18.6.2023 - Ruostunut portti ja kuluneet portaat</li>
-          <li></li>
+          <li><a class="underline hover:text-blue-400" href="#lahti-portti">18.6.2023 - Ruostunut portti ja kuluneet portaat</a></li>
+          <li><a class="underline hover:text-blue-400" href="#vene">7.5.2022 - Vene kevätauringossa</a></li>
         </ol>
       </nav>
     </main>
   </div>
   <div id="footer"></div>
+
+  <div id="modal-display" class="fixed z-100 inset-0 bg-black/80 backdrop-blur-lg flex items-center justify-center hidden">
+    <div class="relative">
+      <img id="modal-img" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg" src="">
+      <button id="modal-close" class="cursor-pointer absolute top-0 -right-7 text-white text-2xl" aria-label="Sulje kuva">&times;</button>
+    </div>
+  </div>
 </body>
 </html>

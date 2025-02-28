@@ -2,38 +2,42 @@ function loadGalleryImage(file) {
     fetch(file)
         .then(response => response.json())
         .then(data => {
-            const hr = document.createElement("hr");
-            hr.classList.add("h-px", "my-8", "bg-gray-200", "border-0", "dark:bg-gray-700"); // TODO muuta omaan tyyliin
+            for (let i = 0; i < data.length; i++) {
+                let imgData = data[i];
 
-            const entryHeading = document.createElement("h3");
-            const entryDescription = document.createElement("p");
-            entryDescription.classList.add("mb-6");
-            const entryCategory = document.createElement("p");
-            entryDescription.classList.add("mb-6");
-            
-            const categoryText = document.createElement("span");
-            categoryText.classList.add("font-bold");
-            categoryText.innerText = "Kategoria: ";
-            const categoryLink = document.createElement("a");
-            categoryLink.classList.add("underline");
+                const hr = document.createElement("hr");
+                hr.classList.add("h-px", "my-8", "bg-gray-500", "border-0");
 
-            entryCategory.appendChild(categoryText);
-            entryCategory.appendChild(categoryLink);
+                const entryHeading = document.createElement("h3");
+                const entryDescription = document.createElement("p");
+                entryDescription.classList.add("mb-6");
+                const entryCategory = document.createElement("p");
+                entryDescription.classList.add("mb-6");
+                
+                const categoryText = document.createElement("span");
+                categoryText.classList.add("font-bold");
+                categoryText.innerText = "Kategoria: ";
+                const categoryLink = document.createElement("a");
+                categoryLink.classList.add("underline");
 
-            const article = document.createElement("article");
-            article.appendChild(entryHeading);
-            article.appendChild(entryDescription);
-            article.appendChild(entryCategory);
+                entryCategory.appendChild(categoryText);
+                entryCategory.appendChild(categoryLink);
 
-            entryHeading.innerText = data.title;
-            entryDescription.innerText = data.description;
-            categoryLink.innerText = data.category;
+                const article = document.createElement("article");
+                article.appendChild(entryHeading);
+                article.appendChild(entryDescription);
+                article.appendChild(entryCategory);
 
-            const content = document.getElementById("content")
-            content.appendChild(hr);
-            content.appendChild(article);
+                entryHeading.innerText = imgData.title;
+                entryDescription.innerText = imgData.description;
+                categoryLink.innerText = imgData.category;
+
+                const content = document.getElementById("content")
+                content.appendChild(hr);
+                content.appendChild(article);
+            }
         })
         .catch(reason => console.log(reason));
 }
 
-loadGalleryImage("./res/data/test_image.json");
+loadGalleryImage("/docs/res/data/images.json");
