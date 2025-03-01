@@ -7,7 +7,8 @@
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./scripts/load.js"></script>
-
+  <script src="./scripts/map.js" type="module"></script>
+  
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
 
@@ -19,8 +20,8 @@
   <div id="header"></div>
   <div id="nav-top" class="sticky top-0 z-10"></div>
   <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370.jpg)] bg-cover">
-    <main class="flex-1 max-w-8xl grid grid-cols-[1fr_3fr_1fr] m-auto text-white">
-      <div id="content" class="col-start-2 col-end-3 max-w-4xl p-8 text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
+    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
+      <div id="content" class="col-start-2 col-end-3 w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
         <p class="mb-6">
           Tähän tekstiä valokuvaamisesta... text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
         </p>
@@ -32,10 +33,10 @@
         <hr>
         <h2>Sivuston sisältö</h2>
         <div class="mb-6 relative">
-          <a class="relative float-right m-2 px-10 w-xs h-20 border-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg hover:bg-blend-multiply" href="./galleria.html">
-            <img class="absolute right-0 object-cover" src="./res/images/C_05628.jpg" loading="lazy" decoding="async">
-            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-green-300 from-50% to-green-300/0 to-80%"></div>
-            <div class="pb-1 text-black font-semibold text-2xl z-10">Galleria</div>
+          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg hover:bg-blend-multiply" href="./galleria.html">
+            <img class="absolute right-0 object-cover" src="./res/images/C_02058_1200.jpg" loading="lazy" decoding="async">
+            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-yellow-600/90 from-50% to-yellow-600/0 to-80%"></div>
+            <div class="pb-1 font-semibold text-2xl z-10">Galleria</div>
             <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <!-- Reshot.com > Arrow Chevron Right -->
               <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
@@ -45,19 +46,43 @@
           <p>Tekstiä galleriaan ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
         </div>
         <div>
+          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg hover:bg-blend-multiply" href="./aiheet.html">
+            <img class="absolute right-0 object-cover" src="./res/images/CEI_03670_400.jpg" loading="lazy" decoding="async">
+            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-pink-600/90 from-50% to-pink-600/0 to-80%"></div>
+            <div class="pb-1 font-semibold text-2xl z-10">Aiheet</div>
+            <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <!-- Reshot.com > Arrow Chevron Right -->
+              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </a>
           <h3>Aiheet</h3>
           <p>Tekstiä aiheisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
-          <a class="float-right" href="./aiheet.html">Aiheet</a>
         </div>
         <div>
+          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg hover:bg-blend-multiply" href="./valineet.html">
+            <img class="absolute right-0 object-cover" src="./res/images/CEI_13762_400.jpg" loading="lazy" decoding="async">
+            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-cyan-400/90 from-50% to-cyan-400/0 to-80%"></div>
+            <div class="pb-1 font-semibold text-2xl z-10">Välineet</div>
+            <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <!-- Reshot.com > Arrow Chevron Right -->
+              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </a>
           <h3>Välineet</h3>
           <p>Tekstiä välineisiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
-          <a class="float-right" href="./valineet.html">Välineet</a>
         </div>
         <div>
+          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-gray-100 text-lg hover:bg-blend-multiply" href="./kuvausprosessi.html">
+            <img class="absolute right-0 object-cover" src="./res/images/CEI_04679_after.jpg" loading="lazy" decoding="async">
+            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-slate-600/90 from-50% to-slate-600/0 to-80%"></div>
+            <div class="pb-1 font-semibold text-2xl z-10">Kuvausprosessi</div>
+            <svg class="z-10 stroke-gray-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <!-- Reshot.com > Arrow Chevron Right -->
+              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </a>
           <h3>Kuvausprosessi</h3>
           <p>Tekstiä kuvausprosessiin ja sen sisältöön liittyen. text text text text text text text text text text text text text text text text text text </p>
-          <a class="float-right" href="./kuvausprosessi.html">Kuvausprosessi</a>
         </div>
 
         <hr>
@@ -70,7 +95,5 @@
     </main>
   </div>
   <div id="footer"></div>
-
-  <script src="./scripts/map.js" type="module"></script>
 </body>
 </html>

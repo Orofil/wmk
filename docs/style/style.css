@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+@theme {
+    --color-bg-main: rgb(24, 24, 24);
+    --color-text-main: rgb(225, 225, 225);
+}
+
 @layer components {
     .slide-line {
         left: var(--position);

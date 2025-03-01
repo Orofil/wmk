@@ -8,6 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="/docs/scripts/load.js"></script>
   <script src="/docs/scripts/aihe.js"></script>
+  <script src="/docs/scripts/image-modal.js"></script>
 
   <link rel="icon" type="image/x-icon" href="/docs/res/favicon.ico">
   <link rel="stylesheet" href="/docs/style/output.css">
@@ -16,8 +17,8 @@
   <div id="header"></div>
   <div id="nav-top"></div>
   <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370.jpg)] bg-cover">
-    <main class="flex-1 max-w-8xl grid grid-cols-[1fr_3fr_1fr] m-auto text-white">
-      <div id="content" class="col-start-2 col-end-3 max-w-4xl p-8 text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
+    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
+      <div id="content" class="col-start-2 col-end-3 w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
         <!-- Breadcrumbs -->
         <nav class="justify-between rounded-lg sm:flex">
           <ol class="inline-flex items-center mb-3 space-x-1 md:space-x-2 rtl:space-x-reverse sm:mb-0">
@@ -40,13 +41,25 @@
         <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700">
         <h2 id="title"></h2>
 
-        <article>
-          <h3>Kuvan nimi</h3>
-          <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
-        </article>
+        <div id="images" class="flex flex-row flex-wrap justify-center">
+        </div>
       </div>
+
+      <!-- Sivunavigaatio -->
+      <nav class="sticky col-start-3 col-end-4 px-4 py-6 m-8 h-fit bg-(--color-bg-main)/80 backdrop-blur-md rounded-lg">
+        <ol id="main-nav">
+          <li></li>
+        </ol>
+      </nav>
     </main>
   </div>
   <div id="footer"></div>
+
+  <div id="modal-display" class="fixed z-100 inset-0 bg-black/80 backdrop-blur-lg flex items-center justify-center hidden">
+    <div class="relative">
+      <img id="modal-img" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg" src="">
+      <button id="modal-close" class="cursor-pointer absolute top-0 -right-7 text-white text-2xl" aria-label="Sulje kuva">&times;</button>
+    </div>
+  </div>
 </body>
 </html>

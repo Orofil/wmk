@@ -2,6 +2,9 @@ function loadGalleryImage(file) {
     fetch(file)
         .then(response => response.json())
         .then(data => {
+            const content = document.getElementById("content");
+            const nav = document.getElementById("main-nav");
+
             for (let i = 0; i < data.length; i++) {
                 let imgData = data[i];
 
@@ -23,18 +26,33 @@ function loadGalleryImage(file) {
                 entryCategory.appendChild(categoryText);
                 entryCategory.appendChild(categoryLink);
 
+                const img = document.createElement("img");
+                img.classList.add("modal-tmb", "cursor-pointer", "rounded-md", "shadow-lg", "float-right", "ml-4");
+
                 const article = document.createElement("article");
                 article.appendChild(entryHeading);
                 article.appendChild(entryDescription);
                 article.appendChild(entryCategory);
+                article.appendChild(img);
 
                 entryHeading.innerText = imgData.title;
+                entryHeading.id = imgData.id;
                 entryDescription.innerText = imgData.description;
                 categoryLink.innerText = imgData.category;
-
-                const content = document.getElementById("content")
+                img.src = "/docs/res/images/" + imgData.file + "." + imgData.file_type;
                 content.appendChild(hr);
                 content.appendChild(article);
+
+                //
+
+                const a = document.createElement("a");
+                a.classList.add("underline", "hover:text-blue-400");
+                a.href = "#" + imgData.id;
+                a.innerText = imgData.date + " - " + imgData.title;
+                const li = document.createElement("li");
+                li.appendChild(a);
+
+                nav.appendChild(li);
             }
         })
         .catch(reason => console.log(reason));

@@ -17,8 +17,8 @@
   <div id="header"></div>
   <div id="nav-top"></div>
   <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370.jpg)] bg-cover">
-    <main class="flex-1 max-w-8xl grid grid-cols-[1fr_3fr_1fr] m-auto text-white">
-      <div id="content" class="col-start-2 col-end-3 max-w-4xl p-8 text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
+    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
+      <div id="content" class="col-start-2 col-end-3 w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
         <h2>Kuvausprosessi</h2>
         
         <h3>Asetukset</h3>
@@ -30,8 +30,8 @@
         <!-- Kaksiosainen kuva jossa liu'utettava välikappale -->
         <div class="slide-image-container relative rounded-3xl overflow-hidden" style="--position: 50%;">
           <div>
-            <img class="object-cover object-left h-full pointer-events-none slide-img absolute" src="./res/images/C_02370.jpg">
-            <img class="object-cover object-left h-full pointer-events-none" src="./res/images/C_02370_dark.jpg">
+            <img class="object-cover object-left h-full pointer-events-none slide-img absolute" src="./res/images/CEI_04679_before.jpg">
+            <img class="object-cover object-left h-full pointer-events-none" src="./res/images/CEI_04679_after.jpg">
           </div>
           <input class="absolute top-0 right-0 bottom-0 left-0 opacity-0 p-0" id="slide-input" type="range" min="0.1" max="99.9" step="0.1">
           <div class="slide-line absolute pointer-events-none w-[2px] -translate-x-1/2 top-0 bg-gradient-to-t from-white from-50% to-white/10" style="height: calc(50% - 16px)"></div>
@@ -54,11 +54,6 @@
           <li>Testi</li>
         </ul>
       </nav>
-    </main>
-  </div>
-  <div class="bg-[url(../res/images/C_02370.jpg)] bg-cover">
-    <main id="content" class="max-w-4xl p-8 m-auto text-white text-md/10 break-words backdrop-brightness-50 backdrop-blur-md">
-      
     </main>
   </div>
   <div id="footer"></div>

@@ -4,10 +4,34 @@
 		"file_type": "jpg",
 		"title": "Testikuva",
 		"id": "testikuva",
-		"date": "2025-02-01",
-		"location": "Patosilta, Tammerkoski, Tampere",
+		"date": "1.2.2025",
+		"location": "Patosilta, Tammerkoski, Tampere, Suomi",
 		"description": "Tämä kuva on testikuva, jolla testaan koodin toimivuutta.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ipsum nec lacus lacinia rhoncus sed eu dui. Vivamus at eleifend leo. Nulla mattis convallis arcu a tincidunt. Nulla cursus sit amet mauris sagittis maximus. Fusce sed ligula ac enim posuere vestibulum id ut dui. Donec blandit mi mauris, ac feugiat mauris fermentum eu.",
 		"category": "Testi",
+		"image_size": "",
+		"image_position": ""
+	},
+	{
+		"file": "CEI_06546_500",
+		"file_type": "jpg",
+		"title": "Varis 1",
+		"id": "varis-1",
+		"date": "",
+		"location": "Kuopio, Suomi",
+		"description": "Kuva variksesta",
+		"category": "Eläimet",
+		"image_size": "",
+		"image_position": ""
+	},
+	{
+		"file": "CEI_06543_500",
+		"file_type": "jpg",
+		"title": "Varis 2",
+		"id": "varis-2",
+		"date": "",
+		"location": "Kuopio, Suomi",
+		"description": "Toinen kuva variksesta",
+		"category": "Eläimet",
 		"image_size": "",
 		"image_position": ""
 	}

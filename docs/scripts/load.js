@@ -1,6 +1,6 @@
 $(function() {
-    $("#header").load("/wmk/html/header.html");
-    $("#nav-top").load("/wmk/html/nav-top.html", function() {
+    $("#header").load("/docs/html/header.html");
+    $("#nav-top").load("/docs/html/nav-top.html", function() {
         // Näytä tämänhetkinen sivu valittuna
         var location = window.location.href;
         var paramIndex = location.indexOf("?");
@@ -14,5 +14,5 @@ $(function() {
         const navList = document.getElementById("nav-" + location);
         navList.classList.add("bg-blue-800");
     });
-    $("#footer").load("/wmk/html/footer.html");
+    $("#footer").load("/docs/html/footer.html");
 })
