@@ -1,5 +1,5 @@
-function loadGalleryCategories(file) {
-    fetch(file)
+function loadGalleryCategories() {
+    fetch("/docs/res/data/images.json")
         .then(response => response.json())
         .then(data => {
             const content = document.getElementById("content");
@@ -8,15 +8,16 @@ function loadGalleryCategories(file) {
                 let imgData = data[i];
 
                 const hr = document.createElement("hr");
-                hr.classList.add("h-px", "my-8", "bg-gray-500", "border-0");
+                hr.classList.add("my-7", "bg-gray-300");
 
                 const entryHeading = document.createElement("h3");
+                entryHeading.classList.add("text-2xl", "font-semibold", "mt-8", "mb-2");
                 const entryInfo = document.createElement("p");
                 entryInfo.classList.add("italic");
                 const entryDescription = document.createElement("p");
-                entryDescription.classList.add("mb-6");
+                entryDescription.classList.add("mb-6", "text-base/7");
                 const entryCategory = document.createElement("p");
-                entryDescription.classList.add("mb-6");
+                entryCategory.classList.add("mb-6", "text-base/7");
                 
                 const categoryText = document.createElement("span");
                 categoryText.classList.add("font-bold");
@@ -27,18 +28,41 @@ function loadGalleryCategories(file) {
                 entryCategory.appendChild(categoryText);
                 entryCategory.appendChild(categoryLink);
 
-                const img = document.createElement("img");
-                img.classList.add("modal-tmb", "cursor-pointer", "rounded-md", "shadow-lg", "float-right", "ml-4");
-
+                let media;
+                if (imgData.type == "image") {
+                    media = document.createElement("img");
+                    media.src = "/docs/res/images/" + imgData.thumbnail;
+                    media.classList.add("modal-tmb", "cursor-pointer", "rounded-lg", "shadow-lg");
+                    media.loading = "lazy";
+                    console.log("File: " + imgData.file);
+                    media.setAttribute("data-full-image", "/docs/res/images/" + imgData.file);
+                    console.log(media.getAttribute("data-full-image"));
+                } else if (imgData.type == "video") {
+                    media = document.createElement("video");
+                    media.setAttribute("controls", "");
+                    media.classList.add("rounded-lg", "shadow-lg");
+                    var vidSource = document.createElement("source");
+                    vidSource.src = "/docs/res/images/" + imgData.file;
+                    media.appendChild(vidSource);
+                }
+                if (imgData.image_position == "bottom") {
+                    media.classList.add("w-full");
+                } else if (imgData.image_position == "bottom-right" || imgData.image_position == "right") {
+                    media.classList.add("float-right", "ml-4");
+                    media.style.height = imgData.image_height + "px";
+                }
+                
                 const article = document.createElement("article");
-                article.appendChild(img);
+                article.style.minHeight = imgData.image_height + "px";
                 article.appendChild(entryHeading);
                 article.appendChild(entryInfo);
                 article.appendChild(entryDescription);
                 article.appendChild(entryCategory);
-                
-                article.style.minHeight = imgData.image_height + "px";
-                img.style.height = imgData.image_height + "px";
+                if (imgData.image_position == "bottom" || imgData.image_position == "bottom-right") {
+                    article.insertBefore(media, entryCategory.nextSibling);
+                } else if (imgData.image_position == "right") {
+                    article.insertBefore(media, entryHeading);
+                }
 
                 entryHeading.innerText = imgData.title;
                 entryHeading.id = imgData.id;
@@ -46,8 +70,7 @@ function loadGalleryCategories(file) {
                 entryDescription.innerText = imgData.description;
                 categoryLink.innerText = imgData.category;
                 categoryLink.href = "./aiheet/aihe.html?name=" + imgData.category;
-                img.src = "/docs/res/images/" + imgData.thumbnail;
-                img.setAttribute("data-full-image", "/docs/res/images/" + imgData.file);
+                
                 content.appendChild(hr);
                 content.appendChild(article);
 
@@ -66,7 +89,7 @@ function loadGalleryCategories(file) {
         .catch(reason => console.log(reason));
 }
 
-loadGalleryCategories("/docs/res/data/images.json");
+loadGalleryCategories();
 
 // Satunnaiseen kuvaan skrollausta varten
 $(document).ready(function() {

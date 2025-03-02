@@ -1,5 +1,6 @@
 [
 	{
+		"type": "image",
 		"thumbnail": "CEI_06378_260.jpg",
 		"file": "CEI_06378.jpg",
 		"title": "Ruostunut portti ja kuluneet portaat",
@@ -12,6 +13,7 @@
 		"image_position": "right"
 	},
 	{
+		"type": "image",
 		"thumbnail": "C_02058_1200.jpg",
 		"file": "C_02058.jpg",
 		"title": "Vene kevätauringossa",
@@ -20,10 +22,11 @@
 		"location": "Kolmisoppi, Kuopio, Suomi",
 		"description": "Toukokuun alussa aurinko paistaa voimakkaasti ja kirkkaasti. Pian se sulattaa viimeisetkin järvien jäät, ja veneet saavat talven jälkeen käyttöä.\n\nValo tässä kuvassa on mielestäni erityisen hieno ja lämmin.",
 		"category": "Kevät",
-		"image_height": "1200",
+		"image_height": "",
 		"image_position": "bottom"
 	},
 	{
+		"type": "image",
 		"thumbnail": "C_06017_333.jpg",
 		"file": "C_06017.jpg",
 		"title": "Petuniat",
@@ -33,9 +36,23 @@
 		"description": "Yksinkertaisia kukkakaupan petunioita, joiden magentat yksityiskohdat näkyvät tarkkoina tässä lähikuvassa.",
 		"category": "Kukat",
 		"image_height": "333",
-		"image_position": "bottom-right"
+		"image_position": "right"
 	},
 	{
+		"type": "video",
+		"thumbnail": "",
+		"file": "VID_kallavesi.mp4",
+		"title": "Pilvet Kallavedellä",
+		"id": "pilvet-kallavedella",
+		"date": "7.6.2024",
+		"location": "Kuopio, Suomi",
+		"description": "Tunti pilvien ja aaltojen liikettä Kallavedellä, tiivistettynä puoleen minuuttiin. Laitoin kameran ottamaan yhden kuvan sekunnin välein.",
+		"category": "Maisemat",
+		"image_height": "",
+		"image_position": "bottom"
+	},
+	{
+		"type": "image",
 		"thumbnail": "CEI_06543_500.jpg",
 		"file": "CEI_06543.jpg",
 		"title": "Varis 2",
@@ -48,6 +65,7 @@
 		"image_position": "right"
 	},
 	{
+		"type": "image",
 		"thumbnail": "CEI_06546_500.jpg",
 		"file": "CEI_06546.jpg",
 		"title": "Varis 1",

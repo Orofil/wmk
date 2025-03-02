@@ -23,7 +23,7 @@
       <div id="main-nav-small-container" class="absolute right-0 m-8 z-100 h-fit w-26 lg:hidden">
         <button id="main-nav-btn" class="cursor-pointer p-2 h-full w-full rounded-xl flex justify-center items-center bg-neutral-800 outline-2 outline-neutral-400 hover:bg-neutral-700 hover:outline-neutral-100" aria-label="Näytä sisällysluettelo">Sisältö</button>
         <div id="main-nav-small" class="absolute top-12 right-0 w-60 p-2 outline-2 outline-neutral-600 rounded-xl bg-neutral-800 hidden">
-          <ol id="main-nav" class="list-disc pl-4 space-y-2">
+          <ol class="main-nav list-disc pl-4 space-y-2">
           </ol>
         </div>
       </div>
@@ -35,7 +35,7 @@
             <ol class="inline-flex items-center mb-3 space-x-1 md:space-x-2 rtl:space-x-reverse sm:mb-0">
               <li>
                 <div class="flex items-center">
-                  <a href="/docs/aiheet.html" class="ms-1 text-sm font-medium md:ms-2 underline text-gray-200 hover:text-blue-400">Aiheet</a>
+                  <a href="/docs/aiheet.html" class="ms-1 mb-1 font-medium md:ms-2 underline text-gray-200 hover:text-blue-400">Aiheet</a>
                 </div>
               </li>
               <li>
@@ -43,20 +43,20 @@
                   <svg class="rtl:rotate-180 w-3 h-3 mx-1 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
                   </svg>
-                  <span id="breadcrumb-current" class="ms-1 text-sm font-medium text-gray-200 hover:text-blue-400"></a>
+                  <span id="breadcrumb-current" class="ms-1 mb-1 font-medium text-gray-200 hover:text-blue-400"></a>
                 </div>
               </li>
             </ol>
           </nav>
-          <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700">
-          <h2 id="title"></h2>
+          <hr class="my-7 bg-gray-300">
+          <h2 class="text-3xl font-bold mb-4" id="title"></h2>
           <div id="images" class="flex flex-row flex-wrap justify-center">
           </div>
         </div>
 
         <!-- Sivunavigaatio -->
         <nav class="col-start-3 col-end-4 sticky top-22 px-4 py-6 m-8 h-fit bg-(--color-bg-main)/80 backdrop-blur-md rounded-lg hidden lg:block">
-          <ol id="main-nav" class="list-disc pl-4 space-y-2">
+          <ol class="main-nav list-disc pl-4 space-y-2">
           </ol>
         </nav>
       </div>

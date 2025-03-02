@@ -20,7 +20,6 @@ $(document).ready(function() {
         .then(response => response.json())
         .then(data => {
             const content = document.getElementById("images");
-            const nav = document.getElementById("main-nav");
 
             for (let i = 0; i < data.length; i++) {
                 let imgData = data[i];
@@ -60,7 +59,7 @@ $(document).ready(function() {
                 const li = document.createElement("li");
                 li.appendChild(a);
 
-                nav.appendChild(li);
+                $(".main-nav").append(li);
             }
         })
         .catch(reason => console.log(reason));
