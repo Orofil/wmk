@@ -45,6 +45,7 @@ function loadGalleryCategories() {
                     vidSource.src = "/wmk/res/images/" + imgData.file;
                     media.appendChild(vidSource);
                 }
+                media.classList.add("aspect-auto");
                 if (imgData.image_position == "bottom") {
                     media.classList.add("w-full");
                 } else if (imgData.image_position == "bottom-right" || imgData.image_position == "right") {
