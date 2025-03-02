@@ -1,5 +1,5 @@
 function loadGalleryCategories() {
-    fetch("/docs/res/data/images.json")
+    fetch("/wmk/res/data/images.json")
         .then(response => response.json())
         .then(data => {
             const content = document.getElementById("content");
@@ -31,18 +31,18 @@ function loadGalleryCategories() {
                 let media;
                 if (imgData.type == "image") {
                     media = document.createElement("img");
-                    media.src = "/docs/res/images/" + imgData.thumbnail;
+                    media.src = "/wmk/res/images/" + imgData.thumbnail;
                     media.classList.add("modal-tmb", "cursor-pointer", "rounded-lg", "shadow-lg");
                     media.loading = "lazy";
                     console.log("File: " + imgData.file);
-                    media.setAttribute("data-full-image", "/docs/res/images/" + imgData.file);
+                    media.setAttribute("data-full-image", "/wmk/res/images/" + imgData.file);
                     console.log(media.getAttribute("data-full-image"));
                 } else if (imgData.type == "video") {
                     media = document.createElement("video");
                     media.setAttribute("controls", "");
                     media.classList.add("rounded-lg", "shadow-lg");
                     var vidSource = document.createElement("source");
-                    vidSource.src = "/docs/res/images/" + imgData.file;
+                    vidSource.src = "/wmk/res/images/" + imgData.file;
                     media.appendChild(vidSource);
                 }
                 if (imgData.image_position == "bottom") {
@@ -69,7 +69,7 @@ function loadGalleryCategories() {
                 entryInfo.innerText = imgData.date + ", " + imgData.location;
                 entryDescription.innerText = imgData.description;
                 categoryLink.innerText = imgData.category;
-                categoryLink.href = "./aiheet/aihe.html?name=" + imgData.category;
+                categoryLink.href = "./aiheet/aihe?name=" + imgData.category;
                 
                 content.appendChild(hr);
                 content.appendChild(article);

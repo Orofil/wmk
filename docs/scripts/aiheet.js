@@ -39,8 +39,8 @@ function loadGalleryCategories(file) {
                 aa.appendChild(divText);
                 aa.appendChild(svg);
 
-                aa.href = "./aiheet/aihe.html?name=" + imgData.category;
-                img.src = "/docs/res/images/" + imgData.thumbnail;
+                aa.href = "./aiheet/aihe?name=" + imgData.category;
+                img.src = "/wmk/res/images/" + imgData.thumbnail;
                 divText.innerText = imgData.category;
                 content.appendChild(aa);
 
@@ -59,4 +59,4 @@ function loadGalleryCategories(file) {
         .catch(reason => console.log(reason));
 }
 
-loadGalleryCategories("/docs/res/data/images.json");
+loadGalleryCategories("/wmk/res/data/images.json");

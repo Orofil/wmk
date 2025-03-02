@@ -2,7 +2,7 @@ $(document).ready(function() {
     const params = new URLSearchParams(window.location.search);
 
     if (!params.has("name") || params.get("name") == "") {
-        document.location = "/docs/aiheet.html";
+        document.location = "/wmk/aiheet";
     }
     
     const titleParts = document.title.split("|");
@@ -16,7 +16,7 @@ $(document).ready(function() {
     
     // Kuvien lataaminen
     
-    fetch("/docs/res/data/images.json")
+    fetch("/wmk/res/data/images.json")
         .then(response => response.json())
         .then(data => {
             const content = document.getElementById("images");
@@ -43,8 +43,8 @@ $(document).ready(function() {
                 div.appendChild(img);
                 div.appendChild(div2);
 
-                img.src = "/docs/res/images/" + imgData.thumbnail;
-                img.setAttribute("data-full-image", "/docs/res/images/" + imgData.file);
+                img.src = "/wmk/res/images/" + imgData.thumbnail;
+                img.setAttribute("data-full-image", "/wmk/res/images/" + imgData.file);
                 entryTitle.innerText = imgData.title;
                 entryDescription.innerText = imgData.description;
 
