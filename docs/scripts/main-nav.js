@@ -6,9 +6,9 @@ $(document).ready(function() {
     $(window).scroll(function() {
         $(window).scroll(function () {
         if ($(window).scrollTop() > 250) {
-            $("#main-nav-small-container").removeClass("absolute").addClass("fixed top-14");
+            $("#main-nav-small-container").removeClass("absolute top-12").addClass("fixed top-24");
         } else {
-            $("#main-nav-small-container").removeClass("fixed top-14").addClass("absolute");
+            $("#main-nav-small-container").removeClass("fixed top-24").addClass("absolute top-12");
         }
         });
     });
