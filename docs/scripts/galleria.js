@@ -48,7 +48,7 @@ function loadGalleryCategories() {
                 if (imgData.image_position == "bottom") {
                     media.classList.add("w-full");
                 } else if (imgData.image_position == "bottom-right" || imgData.image_position == "right") {
-                    media.classList.add("float-right", "ml-4");
+                    media.classList.add("float-right", "ml-4", "max-w-1/2");
                     media.style.height = imgData.image_height + "px";
                 }
                 
