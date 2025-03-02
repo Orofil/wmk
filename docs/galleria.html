@@ -7,6 +7,8 @@
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./scripts/load.js"></script>
+  <script src="./scripts/random-image.js"></script>
+  <script src="./scripts/main-nav.js"></script>
   <script src="./scripts/galleria.js"></script>
   <script src="./scripts/image-modal.js"></script>
 
@@ -17,36 +19,48 @@
   <div id="header"></div>
   <div id="nav-top" class="sticky top-0 z-10"></div>
   <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370_fade.jpg)] bg-fixed bg-cover bg-center">
-    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
-      <div id="content" class="col-start-2 col-end-3 max-w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
-        <h2>Galleria</h2>
-
-        <hr class="h-px my-8 bg-gray-700">
-        <article class="min-h-[400px]">
-          <img class="modal-tmb cursor-pointer rounded-md shadow-lg float-right ml-4" aria-label="Suurenna kuva" src="/docs/res/images/CEI_06378_260.jpg">
-          <h3 id="lahti-portti">Ruostunut portti ja kuluneet portaat</h3>
-          <p class="italic">18.6.2023, Lahti, Suomi</p>
-          <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
-          <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline hover:text-blue-400" href="./aiheet/aihe.html?name=Jotain">Jotain</a></p>
-        </article>
-
-        <hr class="h-px my-8 bg-gray-700">
-        <article>
-          <h3 id="vene">Vene kevätauringossa</h3>
-          <p class="italic">7.5.2022, Kolmisoppi, Kuopio, Suomi</p>
-          <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
-          <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline hover:text-blue-400" href="./aiheet/aihe.html?name=Jotain%20hienoa">Jotain hienoa</a></p>
-          <img class="modal-tmb cursor-pointer rounded-md shadow-lg" aria-label="Suurenna kuva" src="/docs/res/images/C_02058_1200.jpg">
-        </article>
+    <main class="flex-1 flex flex-col w-full lg:max-w-[1500px] m-auto text-(--color-text-main)">
+      <div id="main-nav-small-container" class="absolute right-0 m-8 z-100 h-fit w-26 lg:hidden">
+        <button id="main-nav-btn" class="cursor-pointer p-2 h-full w-full rounded-xl flex justify-center items-center bg-neutral-800 outline-2 outline-neutral-400 hover:bg-neutral-700 hover:outline-neutral-100" aria-label="Näytä sisällysluettelo">Sisältö</button>
+        <div id="main-nav-small" class="absolute top-12 right-0 w-60 p-2 outline-2 outline-neutral-600 rounded-xl bg-neutral-800 hidden">
+          <ol class="main-nav list-disc pl-4 space-y-2">
+            <li><a class="underline hover:text-blue-400" href="#lahti-portti">18.6.2023 - Ruostunut portti ja kuluneet portaat</a></li>
+            <li><a class="underline hover:text-blue-400" href="#vene">7.5.2022 - Vene kevätauringossa</a></li>
+          </ol>
+        </div>
       </div>
-
-      <!-- Sivunavigaatio -->
-      <nav class="col-start-3 col-end-4 sticky top-22 px-4 py-6 m-8 h-fit bg-(--color-bg-main)/80 backdrop-blur-md rounded-lg">
-        <ol id="main-nav" class="list-disc pl-4 space-y-2">
-          <li><a class="underline hover:text-blue-400" href="#lahti-portti">18.6.2023 - Ruostunut portti ja kuluneet portaat</a></li>
-          <li><a class="underline hover:text-blue-400" href="#vene">7.5.2022 - Vene kevätauringossa</a></li>
-        </ol>
-      </nav>
+      
+      <div class="flex-1 md:grid md:grid-cols-[1fr_8.5fr_1fr] lg:grid-cols-[1fr_3fr_1fr]">
+        <div id="content" class="col-start-2 col-end-3 lg:max-w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
+          <h2>Galleria</h2>
+  
+          <hr class="h-px my-8 bg-gray-700">
+          <article class="min-h-[400px]">
+            <img class="modal-tmb cursor-pointer rounded-md shadow-lg float-right ml-4" aria-label="Suurenna kuva" src="/docs/res/images/CEI_06378_260.jpg">
+            <h3 id="lahti-portti">Ruostunut portti ja kuluneet portaat</h3>
+            <p class="italic">18.6.2023, Lahti, Suomi</p>
+            <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
+            <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline hover:text-blue-400" href="./aiheet/aihe.html?name=Jotain">Jotain</a></p>
+          </article>
+  
+          <hr class="h-px my-8 bg-gray-700">
+          <article>
+            <h3 id="vene">Vene kevätauringossa</h3>
+            <p class="italic">7.5.2022, Kolmisoppi, Kuopio, Suomi</p>
+            <p class="mb-6">Tarinaa kuvasta... tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä </p>
+            <p class="mb-6"><span class="font-bold">Kategoria: </span><a class="underline hover:text-blue-400" href="./aiheet/aihe.html?name=Jotain%20hienoa">Jotain hienoa</a></p>
+            <img class="modal-tmb cursor-pointer rounded-md shadow-lg" aria-label="Suurenna kuva" src="/docs/res/images/C_02058_1200.jpg">
+          </article>
+        </div>
+  
+        <!-- Sivunavigaatio -->
+        <nav class="col-start-3 col-end-4 sticky top-22 px-4 py-6 m-8 h-fit bg-(--color-bg-main)/80 backdrop-blur-md rounded-lg hidden lg:block">
+          <ol class="main-nav list-disc pl-4 space-y-2">
+            <li><a class="underline hover:text-blue-400" href="#lahti-portti">18.6.2023 - Ruostunut portti ja kuluneet portaat</a></li>
+            <li><a class="underline hover:text-blue-400" href="#vene">7.5.2022 - Vene kevätauringossa</a></li>
+          </ol>
+        </nav>
+      </div>
     </main>
   </div>
   <div id="footer"></div>

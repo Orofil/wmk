@@ -7,6 +7,8 @@
     
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./scripts/load.js"></script>
+  <script src="./scripts/random-image.js"></script>
+  <script src="./scripts/main-nav.js"></script>
 
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
@@ -15,60 +17,69 @@
   <div id="header"></div>
   <div id="nav-top" class="sticky top-0 z-10"></div>
   <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370_fade.jpg)] bg-fixed bg-cover bg-center">
-    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
-      <div id="content" class="col-start-2 col-end-3 w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
-        <h2>Valokuvausvälineeni</h2>
-        
-        <img class="float-right w-md rounded-lg drop-shadow-lg" src="/docs/res/images/CEI_13762_400.jpg">
-        <h3>Lyhyesti</h3>
-        <ul class="list-disc pl-5 space-y-1.5">
-          <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#kamera">Kamera</a>: </span>Canon EOS RP</li>
-          <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#objektiivit">Objektiivit</a>:</span></li>
-          <ul class="list-disc pl-5 -mt-2">
-            <li>Canon RF 24-105mm f/4-7.1 IS STM</li>
-            <li>Sigma 70-300mm f/4-5.6</li>
+    <main class="flex-1 flex flex-col w-full lg:max-w-[1500px] m-auto text-(--color-text-main)">
+      <div id="main-nav-small-container" class="absolute right-0 m-8 z-100 h-fit w-26 lg:hidden">
+        <button id="main-nav-btn" class="cursor-pointer p-2 h-full w-full rounded-xl flex justify-center items-center bg-neutral-800 outline-2 outline-neutral-400 hover:bg-neutral-700 hover:outline-neutral-100" aria-label="Näytä sisällysluettelo">Sisältö</button>
+        <div id="main-nav-small" class="absolute top-12 right-0 w-60 p-2 outline-2 outline-neutral-600 rounded-xl bg-neutral-800 hidden">
+          <ul id="main-nav" class="list-disc pl-4 space-y-2">
+            <li><a class="underline hover:text-blue-400" href="#kamera">Kamera</a></li>
+            <li><a class="underline hover:text-blue-400" href="#objektiivit">Objektiivit</a></li>
+            <li><a class="underline hover:text-blue-400" href="#jalusta">Jalusta</a></li>
+            <li><a class="underline hover:text-blue-400" href="#puhelin">Puhelin</a></li>
+            <li><a class="underline hover:text-blue-400" href="#muuta">Muuta</a></li>
           </ul>
-          <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#jalusta">Jalusta</a>: </span>Rollei C5I + FPH-52Q</li>
-          <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#puhelin">Puhelin</a>: </span>OnePlus 10T</li>
-          <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#muuta">Muuta</a>:</span></li>
-          <ul class="list-disc pl-5 -mt-2">
-            <li>ZHIYUN Fiveray M20C LED-valo</li>
-          </ul>
-        </ul>
-
-        <h3 id="kamera">Kamera</h3>
-        <p></p>
-
-        <h3 id="objektiivit">Objektiivit</h3>
-        <p></p>
-
-        <h3 id="jalusta">Jalusta</h3>
-        <p></p>
-
-        <h3 id="puhelin">Puhelin</h3>
-        <p></p>
-
-        <h3 id="muuta">Muuta</h3>
-        <p></p>
-
-        <button class="float-right p-4 cursor-pointer bg-gray-700 rounded-lg border border-(--color-text-main) hover:bg-gray-600">
-          Miten käytän kuvausvälineitäni
-          <svg class="inline mb-1 rtl:rotate-180 w-3 h-3 mx-1 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-          </svg>
-        </button>
+        </div>
       </div>
+      
+      <div class="flex-1 md:grid md:grid-cols-[1fr_8.5fr_1fr] lg:grid-cols-[1fr_3fr_1fr]">
+        <div id="content" class="col-start-2 col-end-3 lg:max-w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
+          <h2>Valokuvausvälineeni</h2>
+        
+          <img class="float-right w-md rounded-lg drop-shadow-lg" src="/docs/res/images/CEI_13762_400.jpg">
+          <h3>Lyhyesti</h3>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#kamera">Kamera</a>: </span>Canon EOS RP</li>
+            <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#objektiivit">Objektiivit</a>:</span></li>
+            <ul class="list-disc pl-5 -mt-2">
+              <li>Canon RF 24-105mm f/4-7.1 IS STM</li>
+              <li>Sigma 70-300mm f/4-5.6</li>
+            </ul>
+            <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#jalusta">Jalusta</a>: </span>Rollei C5I + FPH-52Q</li>
+            <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#puhelin">Puhelin</a>: </span>OnePlus 10T</li>
+            <li><span class="font-semibold"><a class="underline hover:text-blue-400" href="#muuta">Muuta</a>:</span></li>
+            <ul class="list-disc pl-5 -mt-2">
+              <li>ZHIYUN Fiveray M20C LED-valo</li>
+            </ul>
+          </ul>
+          <h3 id="kamera">Kamera</h3>
+          <p></p>
+          <h3 id="objektiivit">Objektiivit</h3>
+          <p></p>
+          <h3 id="jalusta">Jalusta</h3>
+          <p></p>
+          <h3 id="puhelin">Puhelin</h3>
+          <p></p>
+          <h3 id="muuta">Muuta</h3>
+          <p></p>
+          <button class="float-right p-4 cursor-pointer bg-gray-700 rounded-lg border border-(--color-text-main) hover:bg-gray-600">
+            Miten käytän kuvausvälineitäni
+            <svg class="inline mb-1 rtl:rotate-180 w-3 h-3 mx-1 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+          </button>
+        </div>
 
-      <!-- Sivunavigaatio -->
-      <nav class="col-start-3 col-end-4 sticky top-22 px-4 py-6 m-8 h-fit bg-(--color-bg-main)/80 backdrop-blur-md rounded-lg">
-        <ul id="main-nav" class="list-disc pl-4 space-y-2">
-          <li><a class="underline hover:text-blue-400" href="#kamera">Kamera</a></li>
-          <li><a class="underline hover:text-blue-400" href="#objektiivit">Objektiivit</a></li>
-          <li><a class="underline hover:text-blue-400" href="#jalusta">Jalusta</a></li>
-          <li><a class="underline hover:text-blue-400" href="#puhelin">Puhelin</a></li>
-          <li><a class="underline hover:text-blue-400" href="#muuta">Muuta</a></li>
-        </ul>
-      </nav>
+        <!-- Sivunavigaatio -->
+        <nav class="col-start-3 col-end-4 sticky top-22 px-4 py-6 m-8 h-fit bg-(--color-bg-main)/80 backdrop-blur-md rounded-lg hidden lg:block">
+          <ul id="main-nav" class="list-disc pl-4 space-y-2">
+            <li><a class="underline hover:text-blue-400" href="#kamera">Kamera</a></li>
+            <li><a class="underline hover:text-blue-400" href="#objektiivit">Objektiivit</a></li>
+            <li><a class="underline hover:text-blue-400" href="#jalusta">Jalusta</a></li>
+            <li><a class="underline hover:text-blue-400" href="#puhelin">Puhelin</a></li>
+            <li><a class="underline hover:text-blue-400" href="#muuta">Muuta</a></li>
+          </ul>
+        </nav>
+      </div>
     </main>
   </div>
   <div id="footer"></div>

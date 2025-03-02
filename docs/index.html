@@ -7,6 +7,7 @@
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./scripts/load.js"></script>
+  <script src="./scripts/random-image.js"></script>
   <script src="./scripts/map.js" type="module"></script>
   
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
@@ -20,99 +21,99 @@
   <div id="header"></div>
   <div id="nav-top" class="sticky top-0 z-10"></div>
   <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370_fade.jpg)] bg-fixed bg-cover bg-center">
-    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
-      <div id="content" class="col-start-2 col-end-3 w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
-        <img class="float-right ml-4 h-[400px] rounded-lg shadow-lg" src="./res/images/LRM_EXPORT_169674267381849_20190727_103510237_500.jpg">
-        <p class="mb-5">
-          Olen Jaakko Saano, 21-vuotias harrastelijavalokuvaaja Kuopiosta. Tämä on nettisivuni, jossa esittelen kuviani ja kuvaustekniikoitani.
-        </p>
-        <p class="my-5">
-          Aloin valokuvaamaan aktiivisesti vuonna 2018. Jo sitä ennen olin silloin tällöin ottanut valokuvia esimerkiksi luonnosta, mutta kun sain isäni järjestelmäkameran käyttööni, innostuin ottamaan paljon kuvia ja taltioimaan ympäröivän maailman yksityiskohtia.
-        </p>
-        <p class="my-5">
-          Sittemmin olen ottanut kamerani mukaan aina kaikille matkoille, olen kokeillut erilaisia valokuvauskohteita ja -tekniikoita, ja olen tutustunut esimerkiksi Adobe Lightroom -kuvanmuokkausohjelmistoon. Minulla on tapana usein kuvata niitä kohteita, mitkä minulle sattuvat tulemaan vastaan kävelyilläni, pyöräilyilläni ja matkoillani, enkä ole niinkään suunnitellut erityisiä kuvausmatkoja tai -kohteita. Näin olen päätynyt kuvaamaan hieman kaikenlaista.
-        </p>
-        <p class="my-5">
-          Toivottavasti nautit kuvistani!
-        </p>
-        <p class="pl-2 my-5 text-gray-300">
-          ~ Jaakko, 2025
-        </p>
-  
-        <hr class="my-4">
-        <h2>Sivuston sisältö</h2>
-        <div class="my-5 relative">
-          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg" href="./galleria.html">
-            <img class="absolute right-0 object-cover" src="./res/images/C_02058_1200.jpg" loading="lazy" decoding="async">
-            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-yellow-600/90 from-50% to-yellow-600/0 to-80%"></div>
-            <div class="pb-1 font-semibold text-2xl z-10">Galleria</div>
-            <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <!-- Reshot.com > Arrow Chevron Right -->
-              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
-            </svg>
-          </a>
-          <h3>Galleria</h3>
-          <p>Blogin tapainen luettelo erilaisista kuvistani. Selaa tätä jos haluat nähdä nopean katsauksen kaikesta, mitä olen kuvannut, tai toisaalta lukea tarkemmin yksittäisten kuvien yksityiskohdista, kuten ottopaikasta ja kuvausasetuksista.</p>
-        </div>
-        <div class="my-5 relative min-h-24">
-          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg" href="./aiheet.html">
-            <img class="absolute right-0 object-cover" src="./res/images/CEI_03670_400.jpg" loading="lazy" decoding="async">
-            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-pink-600/90 from-50% to-pink-600/0 to-80%"></div>
-            <div class="pb-1 font-semibold text-2xl z-10">Aiheet</div>
-            <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <!-- Reshot.com > Arrow Chevron Right -->
-              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
-            </svg>
-          </a>
-          <h3>Aiheet</h3>
-          <p>Kuvani lajiteltuna erilaisiin kategorioihin, kuten eläinkuviin, arkkitehtuuriin, yksityiskohtiin ja abstrakteihin, taiteellisiin valokuviin.</p>
-        </div>
-        <div class="my-5 relative min-h-24">
-          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg" href="./valineet.html">
-            <img class="absolute right-0 object-cover" src="./res/images/CEI_13762_400.jpg" loading="lazy" decoding="async">
-            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-cyan-400/90 from-50% to-cyan-400/0 to-80%"></div>
-            <div class="pb-1 font-semibold text-2xl z-10">Välineet</div>
-            <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <!-- Reshot.com > Arrow Chevron Right -->
-              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
-            </svg>
-          </a>
-          <h3>Välineet</h3>
-          <p>Täällä kerron, millaisia valokuvausvälineitä käytän nykyään ja mitä olen käyttänyt ennen.</p>
-        </div>
-        <div class="my-5 relative min-h-24">
-          <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-gray-100 text-lg" href="./kuvausprosessi.html">
-            <img class="absolute right-0 object-cover" src="./res/images/CEI_04679_after.jpg" loading="lazy" decoding="async">
-            <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-slate-600/90 from-50% to-slate-600/0 to-80%"></div>
-            <div class="pb-1 font-semibold text-2xl z-10">Kuvausprosessi</div>
-            <svg class="z-10 stroke-gray-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <!-- Reshot.com > Arrow Chevron Right -->
-              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke-width="2" stroke-linejoin="round" />
-            </svg>
-          </a>
-          <h3>Kuvausprosessi</h3>
-          <p>Tällä sivulla kerron siitä, miten valitsen kamera-asetukseni valokuvien ottoa varten, ja miten käsittelen valokuviani ottamisen jälkeen.</p>
-        </div>
-
-        <hr class="my-4">
-        <h2>Kuvien sijainteja</h2>
-        <p class="my-4">
-          Alla on kartta muutamista sijainneista, joissa olen ottanut valokuvia. Vie kursori valokuvien päälle nähdäksesi kuvan sijainnin korostettuna kartalla. Voit myös liikuttaa karttaa.
-        </p>
-        <div class="my-6 flex flex-row rounded-lg overflow-hidden">
-          <div class="flex flex-col p-2 h-136 w-80 overflow-scroll space-y-2 bg-neutral-900">
-            <img class="map-img max-h-48 object-cover hover:outline-2" data-marker="italia" src="/docs/res/images/LRM_EXPORT_1341607282082933_20191014_152608455_625.jpg">
-            <img class="map-img max-h-48 object-contain hover:outline-2" data-marker="tampere" src="/docs/res/images/DSC_6045_500.jpg">
-            <img class="map-img max-h-48 object-cover hover:outline-2" data-marker="ruotsi" src="/docs/res/images/CEI_07083_500.jpg">
-            <img class="map-img max-h-48 object-contain hover:outline-2" data-marker="norja" src="/docs/res/images/LRM_EXPORT_169674267381849_20190727_103510237_500.jpg">
-            <img class="map-img max-h-48 object-cover hover:outline-2" data-marker="viro" src="/docs/res/images/IMG_3868_1000.jpg">
-            <img class="map-img max-h-48 object-contain hover:outline-2" data-marker="hossa" src="/docs/res/images/LRM_EXPORT_431795860486148_20190914_201907508_900.jpg">
-            <img class="map-img max-h-48 object-cover hover:outline-2" data-marker="pyha" src="/docs/res/images/DSC_0633_400.jpg">
-            <img class="map-img max-h-48 object-cover hover:outline-2" data-marker="lahti" src="/docs/res/images/IMG_0216_300.jpg">
-            <img class="map-img max-h-48 object-cover hover:outline-2" data-marker="kuopio" src="/docs/res/images/P1120774.jpg">
-            <img class="map-img max-h-48 object-cover hover:outline-2" data-marker="venaja" src="/docs/res/images/P1060886_334.jpg">
+    <main class="flex-1 flex flex-col w-full lg:max-w-[1500px] m-auto text-(--color-text-main)">
+      <div class="flex-1 md:grid md:grid-cols-[1fr_8.5fr_1fr] lg:grid-cols-[1fr_3fr_1fr]">
+        <div id="content" class="col-start-2 col-end-3 lg:max-w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
+          <img class="float-right ml-4 mb-4 h-[250px] sm:h-[400px] rounded-lg shadow-lg" src="./res/images/LRM_EXPORT_169674267381849_20190727_103510237_500.jpg">
+          <p class="mb-5">
+            Olen Jaakko Saano, 21-vuotias harrastelijavalokuvaaja Kuopiosta. Tämä on nettisivuni, jossa esittelen kuviani ja kuvaustekniikoitani.
+          </p>
+          <p class="my-5">
+            Aloin valokuvaamaan aktiivisesti vuonna 2018. Jo sitä ennen olin silloin tällöin ottanut valokuvia esimerkiksi luonnosta, mutta kun sain isäni järjestelmäkameran käyttööni, innostuin ottamaan paljon kuvia ja taltioimaan ympäröivän maailman yksityiskohtia.
+          </p>
+          <p class="my-5">
+            Sittemmin olen ottanut kamerani mukaan aina kaikille matkoille, olen kokeillut erilaisia valokuvauskohteita ja -tekniikoita, ja olen tutustunut esimerkiksi Adobe Lightroom -kuvanmuokkausohjelmistoon. Minulla on tapana usein kuvata niitä kohteita, mitkä minulle sattuvat tulemaan vastaan kävelyilläni, pyöräilyilläni ja matkoillani, enkä ole niinkään suunnitellut erityisiä kuvausmatkoja tai -kohteita. Näin olen päätynyt kuvaamaan hieman kaikenlaista.
+          </p>
+          <p class="my-5">
+            Toivottavasti nautit kuvistani!
+          </p>
+          <p class="pl-2 my-5 text-gray-300">
+            ~ Jaakko, 2025
+          </p>
+          <hr class="my-4">
+          <h2>Sivuston sisältö</h2>
+          <div class="my-5 relative">
+            <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg" href="./galleria.html">
+              <img class="absolute right-0 object-cover" src="./res/images/C_02058_1200.jpg" loading="lazy" decoding="async">
+              <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-yellow-600/90 from-50% to-yellow-600/0 to-80%"></div>
+              <div class="pb-1 font-semibold text-2xl z-10">Galleria</div>
+              <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <!-- Reshot.com > Arrow Chevron Right -->
+                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <h3>Galleria</h3>
+            <p>Blogin tapainen luettelo erilaisista kuvistani. Selaa tätä jos haluat nähdä nopean katsauksen kaikesta, mitä olen kuvannut, tai toisaalta lukea tarkemmin yksittäisten kuvien yksityiskohdista, kuten ottopaikasta ja kuvausasetuksista.</p>
           </div>
-          <div id="map" class="flex-1 min-w-110 h-136"></div>
+          <div class="my-5 relative min-h-24">
+            <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg" href="./aiheet.html">
+              <img class="absolute right-0 object-cover" src="./res/images/CEI_03670_400.jpg" loading="lazy" decoding="async">
+              <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-pink-600/90 from-50% to-pink-600/0 to-80%"></div>
+              <div class="pb-1 font-semibold text-2xl z-10">Aiheet</div>
+              <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <!-- Reshot.com > Arrow Chevron Right -->
+                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <h3>Aiheet</h3>
+            <p>Kuvani lajiteltuna erilaisiin kategorioihin, kuten eläinkuviin, arkkitehtuuriin, yksityiskohtiin ja abstrakteihin, taiteellisiin valokuviin.</p>
+          </div>
+          <div class="my-5 relative min-h-24">
+            <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-black text-lg" href="./valineet.html">
+              <img class="absolute right-0 object-cover" src="./res/images/CEI_13762_400.jpg" loading="lazy" decoding="async">
+              <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-cyan-400/90 from-50% to-cyan-400/0 to-80%"></div>
+              <div class="pb-1 font-semibold text-2xl z-10">Välineet</div>
+              <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <!-- Reshot.com > Arrow Chevron Right -->
+                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <h3>Välineet</h3>
+            <p>Täällä kerron, millaisia valokuvausvälineitä käytän nykyään ja mitä olen käyttänyt ennen.</p>
+          </div>
+          <div class="my-5 relative min-h-24">
+            <a class="relative float-right m-2 px-8 w-xs h-20 hover:outline-2 hover:outline-white rounded-3xl overflow-hidden flex gap-3 items-center text-gray-100 text-lg" href="./kuvausprosessi.html">
+              <img class="absolute right-0 object-cover" src="./res/images/CEI_04679_after.jpg" loading="lazy" decoding="async">
+              <div class="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-slate-600/90 from-50% to-slate-600/0 to-80%"></div>
+              <div class="pb-1 font-semibold text-2xl z-10">Kuvausprosessi</div>
+              <svg class="z-10 stroke-gray-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <!-- Reshot.com > Arrow Chevron Right -->
+                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="none" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <h3>Kuvausprosessi</h3>
+            <p>Tällä sivulla kerron siitä, miten valitsen kamera-asetukseni valokuvien ottoa varten, ja miten käsittelen valokuviani ottamisen jälkeen.</p>
+          </div>
+          <hr class="my-4">
+          <h2>Kuvien sijainteja</h2>
+          <p class="my-4">
+            Alla on kartta muutamista sijainneista, joissa olen ottanut valokuvia. Vie kursori valokuvien päälle nähdäksesi kuvan sijainnin korostettuna kartalla. Voit myös liikuttaa karttaa.
+          </p>
+          <div class="my-6 flex flex-col sm:flex-row rounded-lg overflow-hidden">
+            <div class="flex flex-row sm:flex-col p-2 sm:h-136 sm:w-80 overflow-x-auto sm:overflow-y-auto space-x-2 sm:space-y-2 bg-neutral-900">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover hover:outline-2" data-marker="italia" src="/docs/res/images/LRM_EXPORT_1341607282082933_20191014_152608455_625.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover sm:object-contain hover:outline-2" data-marker="tampere" src="/docs/res/images/DSC_6045_500.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover hover:outline-2" data-marker="ruotsi" src="/docs/res/images/CEI_07083_500.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-contain hover:outline-2" data-marker="norja" src="/docs/res/images/LRM_EXPORT_169674267381849_20190727_103510237_500.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover hover:outline-2" data-marker="viro" src="/docs/res/images/IMG_3868_1000.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-contain hover:outline-2" data-marker="hossa" src="/docs/res/images/LRM_EXPORT_431795860486148_20190914_201907508_900.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover hover:outline-2" data-marker="pyha" src="/docs/res/images/DSC_0633_400.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover hover:outline-2" data-marker="lahti" src="/docs/res/images/IMG_0216_300.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover hover:outline-2" data-marker="kuopio" src="/docs/res/images/P1120774.jpg">
+              <img class="map-img max-w-36 sm:max-w-full sm:max-h-48 object-cover hover:outline-2" data-marker="venaja" src="/docs/res/images/P1060886_334.jpg">
+            </div>
+            <div id="map" class="flex-1 min-h-136 w-full md:min-w-110 md:h-136"></div>
+          </div>
         </div>
       </div>
     </main>

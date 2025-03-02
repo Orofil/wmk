@@ -3,7 +3,6 @@ function loadGalleryCategories(file) {
         .then(response => response.json())
         .then(data => {
             const content = document.getElementById("content");
-            const nav = document.getElementById("main-nav");
 
             for (let i = 0; i < data.length; i++) {
                 let imgData = data[i];
@@ -61,10 +60,27 @@ function loadGalleryCategories(file) {
                 const li = document.createElement("li");
                 li.appendChild(a);
 
-                nav.appendChild(li);
+                $(".main-nav").append(li);
             }
         })
         .catch(reason => console.log(reason));
 }
 
 loadGalleryCategories("/docs/res/data/images.json");
+
+// Satunnaiseen kuvaan skrollausta varten
+$(document).ready(function() {
+    const targetID = window.location.hash.substring(1);
+    if (!targetID) return;
+
+    const observer = new MutationObserver((_, obs) => {
+        const targetElement = $("#" + targetID);
+        if (targetElement.length) {
+            window.scrollTo(0, targetElement.offset().top);
+            /* $("html, body").animate({ scrollTop: targetElement.offset().top }, "slow"); */
+            obs.disconnect();
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+});
