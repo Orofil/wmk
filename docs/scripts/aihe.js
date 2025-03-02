@@ -44,7 +44,8 @@ $(document).ready(function() {
                 div.appendChild(img);
                 div.appendChild(div2);
 
-                img.src = "/docs/res/images/" + imgData.file + "." + imgData.file_type;
+                img.src = "/docs/res/images/" + imgData.thumbnail;
+                img.setAttribute("data-full-image", "/docs/res/images/" + imgData.file);
                 entryTitle.innerText = imgData.title;
                 entryDescription.innerText = imgData.description;
 

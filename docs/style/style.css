@@ -14,4 +14,8 @@
     .slide-img {
         width: var(--position);
     }
+
+    .hovered-marker {
+        filter: hue-rotate(180deg);
+    }
 }

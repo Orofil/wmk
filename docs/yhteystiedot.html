@@ -12,26 +12,30 @@
   <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
   <link rel="stylesheet" href="./style/output.css">
 </head>
-<body>
+<body class="min-h-screen relative flex flex-col">
   <div id="header"></div>
-  <div id="nav-top"></div>
-  <div class="bg-[url(../res/images/C_02370.jpg)] bg-cover">
-    <main id="content" class="max-w-[1500px] p-8 m-auto text-(--color-text-main) text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
-      <h2>Yhteystiedot</h2>
-      <p>Jaakko Saano</p>
-      <p><span class="font-bold">Puhelin: </span>040-1234567</p>
-      <p><span class="font-bold">Sähköposti: </span>sahko.posti@mail.com</p>
-      <hr>
-      <form class="flex flex-col">
-        <p>Lähetä palautetta tai kysymyksiä suoraan:</p>
-        <label for="message-name">Nimesi</label>
-        <input class="bg-black/50 outline-green-700 outline-2 w-s" id="message-name" type="text">
-        <label for="message-email">Sähköpostisi</label>
-        <input class="bg-black/50 outline-green-700 outline-2 w-s" id="message-email" type="email">
-        <label for="message-text">Viesti</label>
-        <textarea class="bg-black/50 outline-green-700 outline-2" id="message-text" rows="6"></textarea>
-        <button class="mt-4 p-2 bg-green-700 rounded-md w-32 self-end" type="submit">Lähetä</button>
-      </form>
+  <div id="nav-top" class="sticky top-0 z-10"></div>
+  <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370_fade.jpg)] bg-fixed bg-cover bg-center">
+    <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
+      <div id="content" class="col-start-2 col-end-3 w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
+        <div class="flex flex-col items-center">
+          <h2>Yhteystietoni</h2>
+          <p>Jaakko Saano</p>
+          <p><span class="font-bold">Puhelin: </span>040-1234567</p>
+          <p><span class="font-bold">Sähköposti: </span>sahko.posti@mail.com</p>
+        </div>
+        <!-- <hr>
+        <form class="flex flex-col">
+          <p>Lähetä palautetta tai kysymyksiä suoraan:</p>
+          <label for="message-name">Nimesi</label>
+          <input class="bg-black/50 outline-green-700 outline-2 w-s" id="message-name" type="text">
+          <label for="message-email">Sähköpostisi</label>
+          <input class="bg-black/50 outline-green-700 outline-2 w-s" id="message-email" type="email">
+          <label for="message-text">Viesti</label>
+          <textarea class="bg-black/50 outline-green-700 outline-2" id="message-text" rows="6"></textarea>
+          <button class="mt-4 p-2 bg-green-700 rounded-md w-32 self-end" type="submit">Lähetä</button>
+        </form> -->
+      </div>
     </main>
   </div>
   <div id="footer"></div>

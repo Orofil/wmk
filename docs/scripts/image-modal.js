@@ -1,9 +1,5 @@
 $(document).on('click', '.modal-tmb', function() {
-    let imgSrc = $(this).attr("src") || $(this).find("img").attr("src");
-    console.log("Clicking");
-    let underscore = imgSrc.lastIndexOf("_");
-    let period = imgSrc.lastIndexOf(".");
-    imgSrc = imgSrc.slice(0, underscore) + imgSrc.slice(period);
+    let imgSrc = $(this).attr("data-full-image") || $(this).find("img").attr("data-full-image");
     $("#modal-img").attr("src", imgSrc);
     $("#modal-display").removeClass("hidden");
     $("body").addClass("overflow-hidden");

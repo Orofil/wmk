@@ -15,43 +15,98 @@
 </head>
 <body class="min-h-screen relative flex flex-col">
   <div id="header"></div>
-  <div id="nav-top"></div>
-  <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370.jpg)] bg-cover">
+  <div id="nav-top" class="sticky top-0 z-10"></div>
+  <div class="flex-1 flex flex-col relative bg-[url(../res/images/C_02370_fade.jpg)] bg-fixed bg-cover bg-center">
     <main class="flex-1 max-w-[1500px] grid grid-cols-[1fr_3fr_1fr] m-auto text-(--color-text-main)">
       <div id="content" class="col-start-2 col-end-3 w-4xl p-8 text-md/10 break-words bg-(--color-bg-main)/80 backdrop-blur-md">
-        <h2>Kuvausprosessi</h2>
+        <h2>Kuvausprosessini</h2>
+
+        <h3 id="sommittelu">Sommittelu</h3>
+        <p class="my-5">
+          Sommitteluun kuuluu kuvattavien kohteiden asettelu kuva-alalle, mikä tehdään kameraa liikuttelemalla ja objektiivin polttoväliä säätämällä. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id orci pellentesque, auctor sem in, pulvinar tellus. Morbi in mauris lobortis, egestas massa in, feugiat metus. Vivamus ut purus tincidunt, posuere magna at, vulputate eros. Suspendisse lacinia dolor at nulla tristique, non tincidunt nisi luctus. Nam et nibh vitae massa dictum vehicula. Donec porta, ligula vitae feugiat lacinia, sapien nisi pharetra lacus, id venenatis nisl erat ac lorem. Quisque gravida interdum mauris vel gravida. In maximus augue a elit dignissim fermentum. Aliquam id venenatis nulla. Suspendisse ultricies feugiat augue, non scelerisque mauris volutpat nec.
+        </p>
+        <img class="h-[600px] ml-4 mt-4 float-right right-0 rounded-lg shadow-lg" src="/docs/res/images/LRM_EXPORT_431795860486148_20190914_201907508_900.jpg">
+        <p class="my-5">
+          Mauris urna mauris, lacinia et tempor nec, ornare pulvinar odio. Integer elementum rutrum orci sit amet pretium. Integer urna velit, aliquam id dignissim sit amet, tristique et diam. Donec ullamcorper facilisis pretium. Vestibulum ut dui aliquam, tempus est quis, ultricies est. Integer eleifend vehicula leo eget lobortis. Donec consectetur dapibus sollicitudin. Vivamus mollis, velit vitae lacinia malesuada, dolor purus faucibus ipsum, in tristique augue tellus at ex. Sed viverra bibendum diam at pulvinar.
+        </p>
+        <p class="my-5">
+          Nam porta maximus eleifend. Phasellus vel turpis a diam fringilla iaculis quis ut tellus. Aliquam erat volutpat. Fusce varius nunc tincidunt consectetur malesuada. Integer ultricies urna tristique, euismod tellus ac, congue mi. Nulla eu quam leo. Morbi in efficitur ante, vitae dictum sapien.
+        </p>
+        <p class="my-5">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget sodales erat. Nam placerat, velit nec lacinia sagittis, eros est euismod diam, ut fermentum lectus urna et diam. Fusce dictum cursus nulla, sit amet consectetur metus convallis accumsan. Maecenas ut turpis nec ipsum semper fringilla vitae sit amet augue. Nunc sed varius eros. Vestibulum felis sapien, laoreet non nisl a, placerat fringilla nibh. Cras efficitur nisl non laoreet luctus.
+        </p>
+        <p class="my-5">
+          Nullam augue velit, sollicitudin vitae ligula quis, pulvinar efficitur ipsum. Fusce porttitor consectetur efficitur. Phasellus hendrerit elit quis tellus blandit, ut venenatis nisl consequat. Mauris mollis scelerisque mi, sed accumsan lacus cursus eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer rutrum cursus lectus.
+        </p>
+
+        <h3 id="asetukset">Kamera-asetukset</h3>
+        <p class="my-5">
+          Valokuvien ottamisessa tärkeimpiin asetuksiin kuuluvat suljinaika, aukko ja ISO. Näiden asetusten asettaminen on yksinkertaisinta, jos valoa on paljon ja kuvattava kohde on liikkumaton. Silloin aukoksi voi valita sen, joka tuottaa parhaan terävyyden tai halutun syväterävyysalueen, ISOn arvoon 100 ja suljinajan lyhyeksi. Esimerkiksi näin:
+          <ul class="my-3 list-disc pl-5 space-y-0.5">
+            <li><span class="font-semibold">Suljinaika: </span>1/8000s</li>
+            <li><span class="font-semibold">Aukko: </span>f8.0</li>
+            <li><span class="font-semibold">ISO: </span>100</li>
+          </ul>
+          Pellentesque suscipit mauris pellentesque velit euismod, quis vestibulum lacus mattis. Quisque feugiat nibh quis neque efficitur vulputate. Duis quis venenatis massa. Morbi scelerisque quis felis nec congue. Donec blandit tempus neque a ullamcorper. Cras leo turpis, hendrerit non sollicitudin vel, facilisis consequat est. Proin congue, lorem vitae placerat iaculis, neque lectus porttitor ex, et convallis justo massa sed libero.
+        </p>
+        <img class="w-md mr-4 mt-4 float-left right-0 rounded-lg shadow-lg" src="/docs/res/images/CEI_05348_333.jpg">
+        <p class="my-5">
+          Maecenas pellentesque viverra metus ut tempor. Sed a mauris id tellus laoreet luctus. Mauris pulvinar magna sapien, in elementum magna gravida vel. Phasellus sagittis ullamcorper aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et tortor quis tellus bibendum ultrices at non ex. Maecenas non facilisis mauris. Pellentesque eleifend in justo vitae interdum. Proin non consectetur enim. Maecenas pellentesque mollis fermentum.
+        </p>
+        <p class="my-5">
+          Suspendisse venenatis semper ultrices. Nunc aliquam lorem et massa condimentum, in congue magna consequat. Ut eget suscipit sem. Nulla bibendum, metus et imperdiet dapibus, odio leo aliquet justo, placerat viverra sapien purus at sapien. Etiam et felis rutrum, vulputate nunc vestibulum, accumsan nisi. Nunc non semper tellus. In eget mi quis erat pellentesque condimentum. Integer consequat nec mauris id sagittis. Nullam maximus mauris diam, sit amet commodo orci tristique sit amet. Morbi nec porta risus, non faucibus nibh. Aliquam dapibus ante vitae dui blandit euismod quis vitae orci. Aliquam lobortis gravida ipsum et bibendum. Donec vel convallis leo. In id arcu efficitur, maximus turpis quis, dignissim dolor. Donec viverra rutrum dolor ut fringilla. Donec at ipsum ac tellus iaculis dictum nec in enim.
+        </p>
+
+        <h3 id="kuvankasittely">Kuvankäsittely</h3>
+        <p class="my-5">
+          Kuvieni käsittelyyn käytän Adobe Lightroomia. Koska en kuitenkaan usein halua maksaa siitä, käytän ilmaista puhelinversiota, jossa ovat perustoiminnot kuvanmuokkaukseen. Internetistä toki saisi monipuolisempiakin kuvankäsittelyohjelmia ilmaiseksi. Ilmaisesta Adobe Lightroomista puuttuu esimerkiksi maskien käyttö.
+        </p>
         
-        <h3>Asetukset</h3>
-        <p>Tähän kamera-asetuksista</p>
-
-        <h3>Kuvankäsittely</h3>
-        <p>Tähän kuvankäsittelystä</p>
-
         <!-- Kaksiosainen kuva jossa liu'utettava välikappale -->
-        <div class="slide-image-container relative rounded-3xl overflow-hidden" style="--position: 50%;">
-          <div>
-            <img class="object-cover object-left h-full pointer-events-none slide-img absolute" src="./res/images/CEI_04679_before.jpg">
-            <img class="object-cover object-left h-full pointer-events-none" src="./res/images/CEI_04679_after.jpg">
+        <div class="ml-4 mb-4 mt-4 float-right right-0 w-lg bg-neutral-900 outline outline-neutral-700 rounded-3xl">
+          <div class="slide-image-container relative rounded-3xl overflow-hidden" style="--position: 50%;">
+            <div>
+              <img class="object-cover object-left h-full pointer-events-none slide-img absolute" src="./res/images/CEI_04679_before.jpg">
+              <img class="object-cover object-left h-full pointer-events-none" src="./res/images/CEI_04679_after.jpg">
+            </div>
+            <input class="cursor-pointer absolute top-0 right-0 bottom-0 left-0 opacity-0 p-0" id="slide-input" type="range" min="0.1" max="99.9" step="0.1">
+            <div class="slide-line absolute pointer-events-none w-[2px] -translate-x-1/2 top-0 bg-gradient-to-t from-white from-50% to-white/10" style="height: calc(50% - 16px)"></div>
+            <div class="slide-line absolute pointer-events-none w-[2px] -translate-x-1/2 bottom-0 bg-gradient-to-b from-white from-50% to-white/10" style="height: calc(50% - 16px)"></div>
+            <div class="slide-line absolute pointer-events-none top-1/2 -translate-1/2">
+              <svg class="w-[48px] h-[32px]">
+                <g>
+                  <rect class="w-[48px] h-[32px]" rx="16" fill="#171717" fill-opacity="0.75"></rect>
+                  <path d="M17 10L12 16L17 22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M31 10L36 16L31 22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </div>
           </div>
-          <input class="absolute top-0 right-0 bottom-0 left-0 opacity-0 p-0" id="slide-input" type="range" min="0.1" max="99.9" step="0.1">
-          <div class="slide-line absolute pointer-events-none w-[2px] -translate-x-1/2 top-0 bg-gradient-to-t from-white from-50% to-white/10" style="height: calc(50% - 16px)"></div>
-          <div class="slide-line absolute pointer-events-none w-[2px] -translate-x-1/2 bottom-0 bg-gradient-to-b from-white from-50% to-white/10" style="height: calc(50% - 16px)"></div>
-          <div class="slide-line absolute pointer-events-none top-1/2 -translate-1/2">
-            <svg class="w-[48px] h-[32px]">
-              <g>
-                <rect class="w-[48px] h-[32px]" rx="16" fill="#171717" fill-opacity="0.75"></rect>
-                <path d="M17 10L12 16L17 22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M31 10L36 16L31 22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </g>
-            </svg>
-          </div>
+          <p class="py-2 px-4 text-wrap text-sm">
+            Esimerkki kuvasta ennen (vasen) ja kuvankäsittelyn jälkeen (oikea). Kokeile liu'uttaa yllä olevaa jakajaa.
+          </p>
         </div>
+        
+        <p class="my-5">
+          Fusce et ex id enim tristique scelerisque. Vestibulum mollis porta velit vitae rutrum. Proin condimentum urna ac enim consequat sodales. Aenean in sagittis nisi. Maecenas ut tellus porttitor, egestas lorem eget, dapibus ligula. Nam eget odio ac dui gravida iaculis. Maecenas fringilla nulla eget lectus euismod, non tristique tellus elementum. Donec hendrerit, est at volutpat posuere, ex lectus molestie orci, ut molestie diam diam nec libero. In placerat odio et venenatis scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent ac ultrices elit. Ut at lectus sed felis venenatis facilisis. Cras sodales magna vitae arcu vulputate interdum. Quisque congue orci pharetra lorem porttitor, sed scelerisque lectus dictum. Nunc sollicitudin varius turpis, et sagittis elit rutrum a. Nullam suscipit odio diam, eget fringilla velit congue eget.
+        </p>
+        <p class="my-5">
+          Phasellus id nunc et orci blandit laoreet. Quisque iaculis libero nisi, a semper lectus malesuada molestie. Ut eget commodo justo. Aenean ipsum neque, porta at ante id, congue sodales dolor. Mauris at pellentesque risus. Mauris sit amet sapien sed ipsum mollis aliquet. Maecenas a finibus lacus, id scelerisque purus. Suspendisse et justo vitae mi pretium egestas. Mauris ut leo vel tellus imperdiet consequat. Cras scelerisque dignissim sapien, ut venenatis felis scelerisque eu. Vivamus lobortis aliquet ex, ac pharetra nunc venenatis sed. Suspendisse condimentum urna a risus blandit, ut venenatis velit fermentum.
+        </p>
+        <p class="my-5">
+          Nullam blandit nulla accumsan sagittis sagittis. Vestibulum molestie pretium magna, et viverra ex dignissim eget. Nunc fermentum feugiat sagittis. Etiam rhoncus in tellus eu consectetur. Nunc dictum erat in porta dapibus. Etiam dignissim volutpat purus, vehicula accumsan nibh accumsan nec. Ut iaculis nunc ut tempus fermentum. Integer convallis nisi eget accumsan euismod. Vestibulum auctor sapien mattis est convallis, eget dignissim dolor porta. Proin eget nunc at magna aliquet tempus eu non velit. Donec in tellus a nulla aliquet faucibus vel id sapien. Proin placerat libero sit amet ligula gravida, vel dignissim ante ultricies.
+        </p>
+        <p class="my-5">
+          Sed ullamcorper egestas rutrum. Suspendisse cursus sit amet nulla eu vestibulum. Nunc congue tellus velit, sed pulvinar lorem sagittis at. Morbi aliquet orci dictum nisl fermentum lobortis. Ut tincidunt dolor a placerat viverra. Donec tempus malesuada varius. Quisque dictum consectetur sem, a pulvinar elit bibendum vitae. Vivamus lobortis est at tempus ullamcorper. Donec id enim et leo volutpat luctus ut sed nunc. Curabitur mattis nisl quis felis suscipit varius.
+        </p>
       </div>
 
       <!-- Sivunavigaatio -->
-      <nav class="col-start-3 col-end-4 p-8 m-8 h-fit backdrop-brightness-50 backdrop-blur-md rounded-lg">
-        <ul id="main-nav">
-          <li>Testi</li>
+      <nav class="col-start-3 col-end-4 sticky top-22 px-4 py-6 m-8 h-fit bg-(--color-bg-main)/80 backdrop-blur-md rounded-lg">
+        <ul id="main-nav" class="list-disc pl-4 space-y-2">
+          <li><a class="underline hover:text-blue-400" href="#sommittelu">Sommittelu</a></li>
+          <li><a class="underline hover:text-blue-400" href="#asetukset">Kamera-asetukset</a></li>
+          <li><a class="underline hover:text-blue-400" href="#kuvankasittely">Kuvankäsittely</a></li>
         </ul>
       </nav>
     </main>
