@@ -1,0 +1,81 @@
+[
+	{
+		"type": "image",
+		"thumbnail": "CEI_06378_260.jpg",
+		"file": "CEI_06378.jpg",
+		"title": "Ruostunut portti ja kuluneet portaat",
+		"id": "lahti-portti",
+		"date": "18.6.2023",
+		"location": "Lahti, Suomi",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet sollicitudin orci. Cras sed posuere nisi, sed hendrerit eros. Nulla rutrum aliquam vulputate. Nam sit amet pharetra tortor, in porta lectus. Integer eu orci molestie, vulputate neque sed, iaculis justo. Curabitur ut luctus mauris. Aliquam tristique viverra fermentum. Donec elementum odio eget nisi lobortis rhoncus. Nullam rutrum molestie sem, et dictum eros euismod id. Nunc at congue orci. Integer non nibh rutrum, auctor purus vel, lobortis diam. Phasellus viverra felis nibh, interdum sodales sapien efficitur sed.\n\nIn porttitor ut massa vitae pharetra. Suspendisse ut turpis at nulla consequat ornare. Morbi iaculis arcu eu dolor hendrerit faucibus. Etiam nunc diam, placerat nec tincidunt eu, bibendum nec dui. Fusce efficitur condimentum mauris at auctor. Fusce cursus quis erat eu rhoncus. Suspendisse potenti. Donec aliquet eu justo vitae consectetur. Suspendisse id risus maximus, consectetur erat non, luctus ipsum. Praesent tristique ac lorem nec tristique. Fusce venenatis leo sodales, placerat orci id, rhoncus ligula.",
+		"category": "Urbaanit yksityiskohdat",
+		"image_height": "390",
+		"image_position": "right"
+	},
+	{
+		"type": "image",
+		"thumbnail": "C_02058_1200.jpg",
+		"file": "C_02058.jpg",
+		"title": "Vene kevätauringossa",
+		"id": "vene",
+		"date": "7.5.2022",
+		"location": "Kolmisoppi, Kuopio, Suomi",
+		"description": "Toukokuun alussa aurinko paistaa voimakkaasti ja kirkkaasti. Pian se sulattaa viimeisetkin järvien jäät, ja veneet saavat talven jälkeen käyttöä.\n\nValo tässä kuvassa on mielestäni erityisen hieno ja lämmin.",
+		"category": "Kevät",
+		"image_height": "",
+		"image_position": "bottom"
+	},
+	{
+		"type": "image",
+		"thumbnail": "C_06017_333.jpg",
+		"file": "C_06017.jpg",
+		"title": "Petuniat",
+		"id": "petuniat",
+		"date": "24.5.2023",
+		"location": "Kuopio, Suomi",
+		"description": "Yksinkertaisia kukkakaupan petunioita, joiden magentat yksityiskohdat näkyvät tarkkoina tässä lähikuvassa.",
+		"category": "Kukat",
+		"image_height": "333",
+		"image_position": "right"
+	},
+	{
+		"type": "video",
+		"thumbnail": "",
+		"file": "VID_kallavesi.mp4",
+		"title": "Pilvet Kallavedellä",
+		"id": "pilvet-kallavedella",
+		"date": "7.6.2024",
+		"location": "Kuopio, Suomi",
+		"description": "Tunti pilvien ja aaltojen liikettä Kallavedellä, tiivistettynä puoleen minuuttiin. Laitoin kameran ottamaan yhden kuvan sekunnin välein.",
+		"category": "Maisemat",
+		"image_height": "",
+		"image_position": "bottom"
+	},
+	{
+		"type": "image",
+		"thumbnail": "CEI_06543_500.jpg",
+		"file": "CEI_06543.jpg",
+		"title": "Varis 2",
+		"id": "varis-2",
+		"date": "7.7.2023",
+		"location": "Kuopio, Suomi",
+		"description": "Pihan varisten ruokintaa.",
+		"category": "Eläimet",
+		"image_height": "400",
+		"image_position": "right"
+	},
+	{
+		"type": "image",
+		"thumbnail": "CEI_06546_500.jpg",
+		"file": "CEI_06546.jpg",
+		"title": "Varis 1",
+		"id": "varis-1",
+		"date": "7.7.2023",
+		"location": "Kuopio, Suomi",
+		"description": "Varis osaa kastella sille annetun leipäpalan vesiastiassa, jotta leipä olisi helpompaa syödä.",
+		"category": "Eläimet",
+		"image_height": "400",
+		"image_position": "right"
+	}
+	
+]
